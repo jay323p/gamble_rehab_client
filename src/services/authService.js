@@ -9,10 +9,6 @@ export const registerUser = async (userData) => {
       userData,
       {
         withCredentials: true,
-        headers: {
-          'Access-Control-Allow-Origin':
-            'https://resonant-cranachan-6ad07d.netlify.app',
-        },
       }
     );
 
@@ -37,10 +33,6 @@ export const loginUser = async (userData) => {
       userData,
       {
         withCredentials: true,
-        headers: {
-          'Access-Control-Allow-Origin':
-            'https://resonant-cranachan-6ad07d.netlify.app',
-        },
       }
     );
 
