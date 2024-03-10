@@ -6,7 +6,14 @@ export const registerUser = async (userData) => {
   try {
     const response = await axios.post(
       'http://localhost:5000/api/users/register',
-      userData
+      userData,
+      {
+        withCredentials: true,
+        headers: {
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
+        },
+      }
     );
 
     if (response.statusText === 'OK') {
@@ -27,7 +34,14 @@ export const loginUser = async (userData) => {
   try {
     const response = await axios.post(
       'http://localhost:5000/api/users/login',
-      userData
+      userData,
+      {
+        withCredentials: true,
+        headers: {
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
+        },
+      }
     );
 
     return response.data;
