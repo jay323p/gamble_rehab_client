@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 export const registerUser = async (userData) => {
   try {
     const response = await axios.post(
-      'http://localhost:5000/api/users/register',
+      'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/register',
       userData,
       {
         withCredentials: true,
@@ -33,7 +33,7 @@ export const registerUser = async (userData) => {
 export const loginUser = async (userData) => {
   try {
     const response = await axios.post(
-      'http://localhost:5000/api/users/login',
+      'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/login',
       userData,
       {
         withCredentials: true,
@@ -58,7 +58,7 @@ export const loginUser = async (userData) => {
 export const logoutUser = async () => {
   try {
     await axios.get(
-      `https://jays-inventory-management.herokuapp.com/api/users/logout`,
+      `https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/logout`,
       {
         withCredentials: true,
       }
@@ -76,7 +76,7 @@ export const logoutUser = async () => {
 export const getLoginStatus = async () => {
   try {
     const response = await axios.get(
-      `https://jays-inventory-management.herokuapp.com/api/users/loginstatus`,
+      `https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/loginstatus`,
       { withCredentials: true }
     );
 

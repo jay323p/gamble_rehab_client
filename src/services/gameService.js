@@ -9,7 +9,7 @@ export const saveGame = async (gameData) => {
   console.log(gameData);
   try {
     const response = await axios.post(
-      'http://localhost:5000/api/games/saveGame',
+      'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/games/saveGame',
       gameData,
       {
         withCredentials: true,
@@ -41,7 +41,7 @@ export const getGameData = async (userEmail) => {
   );
   console.log(userEmail);
   const response = await axios.post(
-    'http://localhost:5000/api/games/getGameData',
+    'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/games/getGameData',
     userEmail,
     {
       withCredentials: true,
