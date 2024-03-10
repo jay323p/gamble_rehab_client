@@ -73,7 +73,7 @@ const Login = () => {
             const res = await loginUser(formData)
 
             if (res) {
-                setCookies('token', res.token, { path: "/" })
+                setCookies('token', res.token, { path: "/", sameSite: "none", secure: true, httpOnly: true })
                 localStorage.setItem('name', res.name);
                 dispatch(SET_USER(res));
                 dispatch(SET_LOGIN(true));
