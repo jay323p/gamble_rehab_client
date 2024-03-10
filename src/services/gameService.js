@@ -14,7 +14,8 @@ export const saveGame = async (gameData) => {
       {
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
         },
       }
     );
@@ -45,7 +46,8 @@ export const getGameData = async (userEmail) => {
     {
       withCredentials: true,
       headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:5173',
+        'Access-Control-Allow-Origin':
+          'https://resonant-cranachan-6ad07d.netlify.app',
       },
     }
   );
