@@ -11,7 +11,8 @@ export const registerUser = async (userData) => {
       {
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
         },
       }
     );
@@ -38,7 +39,8 @@ export const loginUser = async (userData) => {
       {
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
         },
       }
     );
@@ -61,7 +63,8 @@ export const logoutUser = async () => {
       {
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
         },
       }
     );
@@ -82,7 +85,8 @@ export const getLoginStatus = async () => {
       {
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
         },
       }
     );
