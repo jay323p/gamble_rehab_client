@@ -6,7 +6,14 @@ export const registerUser = async (userData) => {
   try {
     const response = await axios.post(
       'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/register',
-      userData
+      userData,
+      {
+        withCredentials: true,
+        headers: {
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
+        },
+      }
     );
 
     if (response.statusText === 'OK') {
@@ -27,7 +34,14 @@ export const loginUser = async (userData) => {
   try {
     const response = await axios.post(
       'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/login',
-      userData
+      userData,
+      {
+        withCredentials: true,
+        headers: {
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
+        },
+      }
     );
 
     return response.data;
@@ -47,6 +61,10 @@ export const logoutUser = async () => {
       `https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/logout`,
       {
         withCredentials: true,
+        headers: {
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
+        },
       }
     );
   } catch (error) {
@@ -63,7 +81,13 @@ export const getLoginStatus = async () => {
   try {
     const response = await axios.get(
       `https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/loginstatus`,
-      { withCredentials: true }
+      {
+        withCredentials: true,
+        headers: {
+          'Access-Control-Allow-Origin':
+            'https://resonant-cranachan-6ad07d.netlify.app',
+        },
+      }
     );
 
     return response.data;
