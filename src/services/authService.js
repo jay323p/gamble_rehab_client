@@ -6,10 +6,7 @@ export const registerUser = async (userData) => {
   try {
     const response = await axios.post(
       'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/register',
-      userData,
-      {
-        withCredentials: true,
-      }
+      userData
     );
 
     if (response.statusText === 'OK') {
@@ -30,10 +27,7 @@ export const loginUser = async (userData) => {
   try {
     const response = await axios.post(
       'https://gamble-rehab-server-f3e149347d25.herokuapp.com/api/users/login',
-      userData,
-      {
-        withCredentials: true,
-      }
+      userData
     );
 
     return response.data;
