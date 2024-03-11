@@ -26,8 +26,10 @@ const ScratchersPlayBox = () => {
             let canvas = document.getElementById('scratch');
             let base = document.querySelector('.base');
             let baseDimensions = base.getBoundingClientRect();
+
             setWindowX(baseDimensions.width);
             setWindowY(baseDimensions.height);
+
             let context = canvas.getContext('2d');
             context.reset();
 
@@ -152,7 +154,8 @@ const ScratchersPlayBox = () => {
                 init();
             }
         }
-    }, [windowX, gameTicketRedux.id]);
+    }, [gameTicketRedux.id]);
+
 
     return (
         <div className="h-full w-full bg-darkGreen">
@@ -192,7 +195,7 @@ const ScratchersPlayBox = () => {
                                 })}
                         </div>
                     </div>
-                    <canvas id="scratch" width={windowX} height={windowY}></canvas>
+                    <canvas id="scratch" width={windowX} height={windowY}>hello</canvas>
                 </div>
             )}
             <div className="h-full w-full overflow-y-hidden opacity-30 z-[-10]">

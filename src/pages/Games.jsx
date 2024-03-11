@@ -33,7 +33,9 @@ const Games = () => {
                     }`}
             >
                 <Navbar />
-                <GamesDashboard />
+                <div className='h-full w-full flex justify-center items-center'>
+                    <GamesDashboard />
+                </div>
             </div>
         </div>
     );
